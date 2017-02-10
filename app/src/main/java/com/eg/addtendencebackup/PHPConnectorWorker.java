@@ -37,14 +37,14 @@ public class PHPConnectorWorker extends AsyncTask<String,Void,String>
         try
         {
             String login_url = "http://" + context.getIP() + "/Altclockin.php";
-            System.out.println("clocking in: " + login_url);
+            System.out.println(image);
 
             String fname = params[0];
             String lname = params[1];
             //String id = params[2];
             String post_data = URLEncoder.encode("first_name","UTF-8")+"="+URLEncoder.encode(fname,"UTF-8")+"&"
                     +URLEncoder.encode("last_name","UTF-8")+"="+URLEncoder.encode(lname,"UTF-8")+"&"
-                    +URLEncoder.encode("image","UTF-8")+"="+URLEncoder.encode(Base64.encodeToString(image, Base64.DEFAULT),"UTF-8");
+                    +URLEncoder.encode("image","UTF-8")+"="+URLEncoder.encode(Base64.encodeToString(image, Base64.NO_WRAP),"UTF-8");
 
             URL url = new URL(login_url);
 
