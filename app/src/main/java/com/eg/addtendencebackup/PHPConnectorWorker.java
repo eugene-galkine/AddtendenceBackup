@@ -34,11 +34,11 @@ public class PHPConnectorWorker extends AsyncTask<String,Void,String>
     @Override
     protected String doInBackground(String... params)
     {
+        System.out.println("start connect");
         try
         {
             String login_url = "http://" + context.getIP() + "/Altclockin.php";
-            System.out.println(image);
-
+            //System.out.println(image);
             String fname = params[0];
             String lname = params[1];
             //String id = params[2];
