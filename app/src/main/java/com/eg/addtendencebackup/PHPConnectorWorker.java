@@ -90,7 +90,8 @@ System.out.println("done connect");
     {
         //context.setMessage(result);
         System.out.println(result);
-        Toast.makeText(context, result, Toast.LENGTH_LONG).show();
+        context.scanned(result);
+        //Toast.makeText(context, result, Toast.LENGTH_LONG).show();
     }
 
     @Override

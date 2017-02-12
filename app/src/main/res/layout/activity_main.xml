@@ -56,4 +56,16 @@
         android:paddingTop="5dp"
         android:id="@+id/img"
         />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/img"
+        android:paddingTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView"
+        android:textSize="36sp"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:fontFamily="sans-serif" />
 </RelativeLayout>
