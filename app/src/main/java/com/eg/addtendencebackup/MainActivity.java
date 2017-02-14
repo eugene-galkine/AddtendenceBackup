@@ -25,7 +25,7 @@ import java.util.Calendar;
 
 public class MainActivity extends Activity
 {
-    private ImageView mImageView;
+    //private ImageView mImageView;
     private TextView textView;
 
 
@@ -34,7 +34,7 @@ public class MainActivity extends Activity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mImageView = (ImageView)findViewById(R.id.img);
+        //mImageView = (ImageView)findViewById(R.id.img);
 
         textView = (TextView) findViewById(R.id.textView);
     }
@@ -65,10 +65,10 @@ public class MainActivity extends Activity
                 matrix.postRotate(270);
 
                 bmp = Bitmap.createBitmap(bmp , 0, 0, bmp.getWidth(), bmp .getHeight(), matrix, true);
-                mImageView.setImageBitmap(bmp);
+                //mImageView.setImageBitmap(bmp);
 
                 ByteArrayOutputStream bao = new ByteArrayOutputStream();
-                bmp.compress(Bitmap.CompressFormat.JPEG, 90, bao);
+                bmp.compress(Bitmap.CompressFormat.JPEG, 70, bao);
                 byte[] ba = bao.toByteArray();
 
                 PHPConnectorWorker connectorWorker = new PHPConnectorWorker(getActivity(), ba);
@@ -142,7 +142,7 @@ public class MainActivity extends Activity
         else
         {
             textView.setText(Calendar.getInstance().get(Calendar.HOUR) + ":" + (Calendar.getInstance().get(Calendar.MINUTE) < 10 ? "0" : "") + Calendar.getInstance().get(Calendar.MINUTE) + " " + (Calendar.getInstance().get(Calendar.AM_PM) == 0 ? "AM" : "PM"));
-            textView.setBackgroundColor(getResources().getColor(R.color.green));
+            textView.setBackgroundColor(getResources().getColor(R.color.exactgreen));
         }
 
         WaitToRestart waitToRestart = new WaitToRestart(this);
@@ -153,6 +153,6 @@ public class MainActivity extends Activity
     {
         textView.setText("");
         textView.setBackgroundColor(0);
-        ((ImageView) findViewById(R.id.img)).setImageBitmap(null);
+        //mImageView.setImageBitmap(null);
     }
 }

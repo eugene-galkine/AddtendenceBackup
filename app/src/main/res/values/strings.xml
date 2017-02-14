@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ExactData</string>
+    <string name="quote">\"The best preparation for tomorrow is doing your best today\"</string>
+    <string name="quote_author">-H. Jackson Brown Jr.</string>
 </resources>
